@@ -1,0 +1,38 @@
+<%- model_class = Leki -%>
+<div class="page-header">
+  <h1>Leki</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:lp) %></th>
+      <th><%= model_class.human_attribute_name(:nazwa) %></th>
+      <th><%= model_class.human_attribute_name(:cena) %></th>
+      <th><%=t '.actions', default: t("helpers.akcje") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @lekis.each_with_index do |leki, i| %>
+      <tr>
+        <td><%= (i+1) %></td>
+		  <td><%= leki.nazwa %></td>
+          <td><%= leki.cena %></td>
+        <td>
+          <%= link_to leki_path(leki), class: 'btn btn-xs', title: "#{ t('.show', default: t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+          <%- end -%>
+          <%= link_to edit_leki_path(leki), class: 'btn btn-xs', title: "#{ t('.edit', default: t('helpers.links.edit')) }" do %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to leki_path(leki), method: :delete, data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Na pewno chcesz usunąć')) }, class: 'btn btn-xs', title: "#{ t('.destroy', default: t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', default: t("helpers.links.Dodaj")),
+new_leki_path,
+class: 'btn add-new btn-primary' %>

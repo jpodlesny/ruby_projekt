@@ -1,0 +1,23 @@
+<%= form_for @leki, html: { class: 'form-horizontal' } do |f| %>
+  <div class="form-group">
+    <%= f.label :nazwa, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :nazwa, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cena, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :cena, class: 'text_field form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit "Dodaj lek", class: 'btn btn-primary' %>
+      <%= link_to t('.cancel', default: t("helpers.links.cancel")),
+                  lekis_path, class: 'btn btn-default' %>
+    </div>
+  </div>
+<% end %>
+

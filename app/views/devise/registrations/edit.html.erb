@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="row centered-form">
+		<div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Edycja</h3>
+				</div>
+				<div class="panel-body">
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
+             html: { method: :put }) do |f| %>
+              <%= f.error_notification %>
+              <%= f.input :email, required: true, autofocus: true %>
+
+              <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+              <% end %>
+
+              <%= f.input :password, autocomplete: "off", required: false %>
+              <%= f.input :password_confirmation, required: false %>
+              <%= f.input :current_password, required: true, placeholder: "Podaj aktualne hasło" %>
+							<%= f.button :submit, "Edytuj", :class => "btn btn-lg btn-primary btn-block" %>
+          <% end %>
+
+        </div>
+          <p><%= link_to "USUŃ KONTO", registration_path(resource_name), data: { confirm: "Na pewno chcesz usunąć konto?" }, method: :delete %></p>
+          <%= link_to "Cofnij", :back %>
+			</div>
+		</div>
+	</div>
+</div>

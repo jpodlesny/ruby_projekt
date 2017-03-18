@@ -1,3 +1,26 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+body {
+    background-color: #F8FEF7;
+    padding-top: 60px;
+    margin: auto;
+    width: 70%;
+}
+
+.main-page {
+	text-align: center;
+	font-family: Verdana;
+	margin: auto;
+}
+
+.main-page .btn-lg{
+	color: #ffffff;
+}
+
+.navbar-fixed-top {
+  background-color: #0B3900;
+}

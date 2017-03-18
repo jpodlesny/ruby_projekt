@@ -1,4 +1,11 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<div class="jumbotron">
+	<h1>Julian Podleśny</h1>
+	<p>Baza leków</p>
+	<br>
+	<br>
+	<% if !user_signed_in? %>
+		<p><a class="btn btn-lg btn-success" href="/users/sign_up" role="button">Zarejestruj się!</a></p>
+	<% else %>
+		<p><a class="btn btn-default" href="/lekis" role="button">Teraz masz dostęp do bazy leków</a></p>
+	<% end %>
+</div>
