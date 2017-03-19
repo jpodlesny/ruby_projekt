@@ -6,9 +6,10 @@
 ### [ ] [Link do aplikacji](https://intense-brook-60837.herokuapp.com/)
 
 ### Temat: Leki
-Aplikacja umożliwia dodawanie, modyfikowanie, wyświetlanie oraz usuwanie leków.
+Aplikacja umożliwia dodawanie, modyfikowanie, wyświetlanie oraz usuwanie leków. Po zalogowaniu istnieje możliwość edycji konta - zmiana hasła, emaila.
 
 ### Dodatkowe gemy:<br />
 - bcrypt - szyfrowanie hasła
 - devise - zarządzanie użytkownikami i uwierzytelnieniem
 - simple_form - dodawanie formularzy
+- faker - generowanie fałszywych danych

@@ -8,7 +8,6 @@ body {
     background-color: #F8FEF7;
     padding-top: 60px;
     margin: auto;
-    width: 70%;
 }
 
 .main-page {
@@ -23,4 +22,19 @@ body {
 
 .navbar-fixed-top {
   background-color: #0B3900;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 3px 4px 7px -1px rgba(0,0,0,0.75);
+}
+
+.navbar-link:hover {
+  background-color: #0B3900;
+}
+
+.glyphicon {
+  color: #16A700;
+}
+
+.jumbotron {
+  background-color: #E9FFE3;
 }

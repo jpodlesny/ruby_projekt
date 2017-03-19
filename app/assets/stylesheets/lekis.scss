@@ -9,13 +9,25 @@
 }
 
 .table-striped {
-	margin: auto;
-}
-
-.col-md-10{
-	width: 70%;
+	background-color: #F2FFF0;
+	border: 1px solid #0B3900;
 }
 
 .fieldset {
+	margin: auto;
+	width: 60%;
+}
+
+.btn-xs:hover{
+	background-color: #B0FFA4;
+}
+
+.main-page-leki {
+	width: 60%;
+	margin: auto;
+}
+
+.form-horizontal {
+	width: 60%;
 	margin: auto;
 }
