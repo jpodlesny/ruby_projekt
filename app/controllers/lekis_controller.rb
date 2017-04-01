@@ -4,7 +4,8 @@ class LekisController < ApplicationController
   # GET /lekis
   # GET /lekis.json
   def index
-    @lekis = Leki.all
+    @search = Leki.search(params[:q])
+    @lekis = @search.result
   end
 
   # GET /lekis/1

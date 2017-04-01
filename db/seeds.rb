@@ -7,9 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-30.times do
-  Leki.create([{
-                nazwa: Faker::App.unique.name,
-                cena: Faker::Number.between(10, 200)
-              }])
+Leki.destroy_all
+
+File.open("db/leki.txt", "r") do |f|
+  f.each_line do |line|
+    nazwa = line.chomp.split(";")
+    Leki.create!(nazwa: nazwa, cena: Faker::Number.between(10, 200))
+  end
 end

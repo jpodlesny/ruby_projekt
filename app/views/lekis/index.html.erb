@@ -3,12 +3,19 @@
 <div class="page-header">
   <h1>Leki</h1>
 </div>
+  <%= search_form_for @search do |f| %>
+    <div class="search-field">
+      <%= f.label :nazwa_cont, "Wyszukaj po nazwie" %>
+      <%= f.text_field :nazwa_cont %>
+    </div>
+    <div class="actions"><%= f.submit "Szukaj" %></div>
+  <% end %>
 <table class="table table-striped">
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:lp) %></th>
-      <th><%= model_class.human_attribute_name(:nazwa) %></th>
-      <th><%= model_class.human_attribute_name(:cena) %></th>
+      <th><%= sort_link @search, :nazwa, "Nazwa "%></th>
+      <th><%= sort_link @search, :cena, "Cena "%></th>
       <th><%=t '.actions', default: t("helpers.akcje") %></th>
     </tr>
   </thead>

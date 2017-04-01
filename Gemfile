@@ -60,6 +60,7 @@ gem 'bootstrap-sass', '3.3.7'
 gem 'bootstrap-sass-extras', '0.0.7'
 
 gem 'devise', '~> 4.2'
-gem 'bcrypt', '~> 3.1.11'
 gem 'simple_form', '~> 3.4'
 gem 'faker'
+gem 'bcrypt', '~> 3.1.11'
+gem 'ransack', '~> 1.8.2'

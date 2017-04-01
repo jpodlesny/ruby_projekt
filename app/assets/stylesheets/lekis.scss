@@ -13,6 +13,10 @@
 	border: 1px solid #0B3900;
 }
 
+.sort_link:hover {
+	background-color: #F2FFF0;
+}
+
 .fieldset {
 	margin: auto;
 	width: 60%;
@@ -27,7 +31,28 @@
 	margin: auto;
 }
 
+@media (max-width: 720px) {
+	.main-page-leki {
+		width: 100%;
+		margin: auto;
+	}
+}
+
 .form-horizontal {
 	width: 60%;
 	margin: auto;
+}
+
+.leki_search {
+	padding: 20px;
+	margin: auto;
+	text-align: left;
+}
+
+.actions {
+	padding-bottom: 10px;
+}
+
+.table-striped th {
+	text-align: center;
 }
